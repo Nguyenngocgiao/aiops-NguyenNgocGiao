@@ -1,0 +1,52 @@
+version: 1
+services:
+  # API Service - Request/Response type
+  - name: api
+    sli:
+      name: api_availability_and_latency
+      kind: availability
+      formula: "count(status∈{2xx,3xx,4xx_not_429} AND latency_ms < 500) / count(all_requests)"
+      promql_good: 'sum(rate(http_requests_total{status!~"5..|429",latency_bucket="le_500"}[1m]))'
+      promql_total: 'sum(rate(http_requests_total[1m]))'
+      source: data/access_log.jsonl
+    slo:
+      target: 0.995
+      window_days: 30
+    budget:
+      total_events_per_month: 20737800
+      allowed_failures_per_month: 103689
+      downtime_minutes_equivalent: 218
+
+  # Database Service - Storage type
+  - name: db
+    sli:
+      name: db_query_success_and_performance
+      kind: latency
+      formula: "count(success=true AND duration_ms < 100) / count(all_queries)"
+      promql_good: 'sum(rate(db_query_success_total{duration_bucket="le_100"}[1m]))'
+      promql_total: 'sum(rate(db_query_total[1m]))'
+      source: data/db_query_log.jsonl
+    slo:
+      target: 0.999
+      window_days: 30
+    budget:
+      total_events_per_month: 1726380
+      allowed_failures_per_month: 1726
+      downtime_minutes_equivalent: 43
+
+  # Frontend Service - User Experience type  
+  - name: frontend
+    sli:
+      name: frontend_page_usability
+      kind: availability
+      formula: "count(dom_ready_ms < 2000 AND js_error=false AND network_error=false) / count(all_page_loads)"
+      promql_good: 'sum(rate(frontend_page_loads_total{dom_ready_bucket="le_2000",js_error="false",network_error="false"}[1m]))'
+      promql_total: 'sum(rate(frontend_page_loads_total[1m]))'
+      source: data/frontend_rum.jsonl
+    slo:
+      target: 0.99
+      window_days: 30
+    budget:
+      total_events_per_month: 5184000
+      allowed_failures_per_month: 51840
+      downtime_minutes_equivalent: 432
