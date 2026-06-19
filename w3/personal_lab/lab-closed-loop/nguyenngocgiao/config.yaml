@@ -1,0 +1,47 @@
+alertmanager_url: "http://localhost:9093"
+prometheus_url: "http://localhost:9090"
+poll_interval_seconds: 15
+runbook_timeout_seconds: 30
+
+# Path relative to the directory where closed_loop.py is run
+baseline_path: "../data-pack/data/baseline.json"
+
+runbook_map:
+  HighLatency:   "runbooks/restart_service.sh"
+  HighErrorRate: "runbooks/clear_cache.sh"
+  InstanceDown:  "runbooks/restart_service.sh"
+  # Trigger for multi-step scenario
+  MultiStepAlert: "runbooks/restart_service.sh"
+  TestHallucination: "runbooks/nonexistent.sh"
+
+# Whitelist of allowed runbooks to prevent LLM hallucination
+runbook_registry:
+  - "runbooks/restart_service.sh"
+  - "runbooks/clear_cache.sh"
+  - "runbooks/scale_replicas.sh"
+  # Note: "runbooks/nonexistent_runbook.sh" is intentionally left out to test hallucination defense
+
+rollback_map:
+  HighLatency:   "runbooks/restart_service.sh"
+  HighErrorRate: "runbooks/restart_service.sh"
+  InstanceDown:  "runbooks/restart_service.sh"
+
+multi_step_map:
+  MultiStepAlert:
+    - "runbooks/restart_service.sh"
+    - "runbooks/clear_cache.sh"
+    - "runbooks/scale_replicas.sh"
+
+multi_step_rollback_map:
+  MultiStepAlert:
+    - "runbooks/restart_service.sh"
+    - "runbooks/clear_cache.sh"
+    - "runbooks/scale_replicas.sh"
+
+blast_radius:
+  max_actions_per_minute: 3
+  max_restarts_per_service_per_hour: 5
+
+circuit_breaker:
+  consecutive_failure_threshold: 3
+  reset_mode: manual

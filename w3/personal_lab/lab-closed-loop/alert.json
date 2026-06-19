@@ -1,0 +1,12 @@
+[
+  {
+    "labels": {
+      "alertname": "TestHallucination",
+      "service": "frontend",
+      "severity": "critical"
+    },
+    "annotations": {
+      "summary": "Synthetic test alert"
+    }
+  }
+]
