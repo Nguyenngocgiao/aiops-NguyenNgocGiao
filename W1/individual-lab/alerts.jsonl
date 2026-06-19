@@ -1,0 +1,112 @@
+{"timestamp": "2026-06-05T09:21:08.068+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory growing ~5MB/tick"}
+{"timestamp": "2026-06-05T09:22:10.318+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory slope +10.7MB/tick over last 5 ticks"}
+{"timestamp": "2026-06-05T09:23:00.546+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory slope +8.7MB/tick over last 15 ticks; GC also rising slope=2.4ms/tick"}
+{"timestamp": "2026-06-05T09:23:50.787+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory slope +8.0MB/tick over last 15 ticks; GC also rising slope=0.8ms/tick"}
+{"timestamp": "2026-06-05T09:24:41.020+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory slope +7.8MB/tick over last 15 ticks; GC also rising slope=1.6ms/tick"}
+{"timestamp": "2026-06-05T09:25:31.258+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory slope +7.0MB/tick over last 15 ticks; GC also rising slope=2.1ms/tick"}
+{"timestamp": "2026-06-05T09:26:21.500+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory at 81.0%; memory slope +8.7MB/tick over last 15 ticks; GC also rising slope=2.3ms/tick"}
+{"timestamp": "2026-06-05T09:27:11.754+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory at 82.2%; memory slope +7.2MB/tick over last 15 ticks; GC also rising slope=1.9ms/tick"}
+{"timestamp": "2026-06-05T09:28:02.027+00:00", "type": "memory_leak", "severity": "warning", "message": "Memory leak detected — memory at 86.4%; memory slope +6.5MB/tick over last 15 ticks; GC also rising slope=1.6ms/tick"}
+{"timestamp": "2026-06-05T09:28:52.206+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 91.9%; memory slope +8.1MB/tick over last 15 ticks; GC also rising slope=1.9ms/tick"}
+{"timestamp": "2026-06-05T09:29:42.419+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.2%; memory slope +7.5MB/tick over last 15 ticks"}
+{"timestamp": "2026-06-05T09:30:32.618+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.5%"}
+{"timestamp": "2026-06-05T09:31:22.843+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.9%"}
+{"timestamp": "2026-06-05T09:32:13.050+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.7%"}
+{"timestamp": "2026-06-05T09:33:03.237+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T09:33:53.475+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.9%"}
+{"timestamp": "2026-06-05T09:34:43.674+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 93.7%"}
+{"timestamp": "2026-06-05T09:35:33.860+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T09:36:24.131+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.2%"}
+{"timestamp": "2026-06-05T09:37:14.366+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.8%"}
+{"timestamp": "2026-06-05T09:38:04.621+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.2%"}
+{"timestamp": "2026-06-05T09:38:54.855+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.0%"}
+{"timestamp": "2026-06-05T09:39:24.970+00:00", "type": "dependency_timeout", "severity": "critical", "message": "Dependency timeout cascade detected — upstream_timeout_rate=0.4% (z=3.5); http_5xx_rate=46.3% (z=0.9)"}
+{"timestamp": "2026-06-05T09:39:45.067+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.1%"}
+{"timestamp": "2026-06-05T09:40:35.331+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T09:41:25.580+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.5%"}
+{"timestamp": "2026-06-05T09:42:15.785+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 91.9%"}
+{"timestamp": "2026-06-05T09:43:05.975+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.7%"}
+{"timestamp": "2026-06-05T09:43:56.224+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.2%"}
+{"timestamp": "2026-06-05T09:44:46.409+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T09:45:36.639+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.3%"}
+{"timestamp": "2026-06-05T09:46:26.936+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.4%"}
+{"timestamp": "2026-06-05T09:47:17.135+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.2%; memory slope +2.2MB/tick over last 15 ticks"}
+{"timestamp": "2026-06-05T09:48:07.329+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.2%"}
+{"timestamp": "2026-06-05T09:48:57.543+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.0%"}
+{"timestamp": "2026-06-05T09:49:47.774+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.7%"}
+{"timestamp": "2026-06-05T09:50:38.024+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.6%"}
+{"timestamp": "2026-06-05T09:51:28.256+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.8%"}
+{"timestamp": "2026-06-05T09:52:18.500+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T09:53:08.729+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 97.4%; memory slope +2.6MB/tick over last 15 ticks; GC also rising slope=0.6ms/tick"}
+{"timestamp": "2026-06-05T09:53:58.971+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 92.3%"}
+{"timestamp": "2026-06-05T09:54:49.209+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 93.3%"}
+{"timestamp": "2026-06-05T09:55:39.407+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T09:56:29.655+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.2%"}
+{"timestamp": "2026-06-05T09:57:19.855+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.3%"}
+{"timestamp": "2026-06-05T09:58:10.122+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.0%"}
+{"timestamp": "2026-06-05T09:59:00.372+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 97.4%"}
+{"timestamp": "2026-06-05T09:59:50.589+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.9%"}
+{"timestamp": "2026-06-05T10:00:40.804+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.8%"}
+{"timestamp": "2026-06-05T10:01:30.987+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.4%"}
+{"timestamp": "2026-06-05T10:02:21.203+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.1%"}
+{"timestamp": "2026-06-05T10:03:11.403+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T10:04:01.653+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.1%"}
+{"timestamp": "2026-06-05T10:04:51.900+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.7%; memory slope +2.4MB/tick over last 15 ticks"}
+{"timestamp": "2026-06-05T10:05:42.146+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.5%"}
+{"timestamp": "2026-06-05T10:06:32.353+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.3%"}
+{"timestamp": "2026-06-05T10:07:22.539+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 93.9%"}
+{"timestamp": "2026-06-05T10:08:12.798+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.8%"}
+{"timestamp": "2026-06-05T10:09:03.035+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.5%"}
+{"timestamp": "2026-06-05T10:09:53.236+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.9%"}
+{"timestamp": "2026-06-05T10:10:43.453+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.4%"}
+{"timestamp": "2026-06-05T10:11:33.666+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.2%"}
+{"timestamp": "2026-06-05T10:12:23.897+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.8%"}
+{"timestamp": "2026-06-05T10:13:14.138+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.3%"}
+{"timestamp": "2026-06-05T10:14:04.407+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.5%"}
+{"timestamp": "2026-06-05T10:14:54.697+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.5%"}
+{"timestamp": "2026-06-05T10:15:44.945+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.1%"}
+{"timestamp": "2026-06-05T10:16:35.161+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 93.5%"}
+{"timestamp": "2026-06-05T10:17:25.427+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.4%"}
+{"timestamp": "2026-06-05T10:18:15.691+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T10:19:05.943+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.0%"}
+{"timestamp": "2026-06-05T10:19:56.154+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.5%; memory slope +2.3MB/tick over last 15 ticks"}
+{"timestamp": "2026-06-05T10:20:46.370+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.4%"}
+{"timestamp": "2026-06-05T10:21:36.621+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 93.5%"}
+{"timestamp": "2026-06-05T10:22:26.853+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T10:23:17.148+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.5%"}
+{"timestamp": "2026-06-05T10:24:07.407+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.7%"}
+{"timestamp": "2026-06-05T10:24:57.673+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 93.8%"}
+{"timestamp": "2026-06-05T10:25:47.865+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.6%"}
+{"timestamp": "2026-06-05T10:26:38.095+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.8%"}
+{"timestamp": "2026-06-05T10:27:28.271+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.0%"}
+{"timestamp": "2026-06-05T10:28:18.489+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.2%"}
+{"timestamp": "2026-06-05T10:29:08.710+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.7%"}
+{"timestamp": "2026-06-05T10:29:58.953+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.2%"}
+{"timestamp": "2026-06-05T10:30:49.166+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.3%"}
+{"timestamp": "2026-06-05T10:31:39.441+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.2%"}
+{"timestamp": "2026-06-05T10:32:29.668+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.5%"}
+{"timestamp": "2026-06-05T10:33:19.918+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 97.4%"}
+{"timestamp": "2026-06-05T10:34:10.092+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T10:35:00.310+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.5%"}
+{"timestamp": "2026-06-05T10:35:50.584+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T10:36:40.800+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.1%"}
+{"timestamp": "2026-06-05T10:37:31.036+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T10:38:21.233+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.6%"}
+{"timestamp": "2026-06-05T10:39:11.478+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.0%"}
+{"timestamp": "2026-06-05T10:40:01.713+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.8%"}
+{"timestamp": "2026-06-05T10:40:51.936+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.8%"}
+{"timestamp": "2026-06-05T10:41:42.210+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.7%"}
+{"timestamp": "2026-06-05T10:42:32.463+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T10:43:22.639+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.9%"}
+{"timestamp": "2026-06-05T10:44:12.787+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.4%"}
+{"timestamp": "2026-06-05T10:45:03.041+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.6%"}
+{"timestamp": "2026-06-05T10:45:53.290+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.5%"}
+{"timestamp": "2026-06-05T10:46:43.496+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.5%"}
+{"timestamp": "2026-06-05T10:47:33.728+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.3%"}
+{"timestamp": "2026-06-05T10:48:23.968+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.0%"}
+{"timestamp": "2026-06-05T10:49:14.206+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 95.1%"}
+{"timestamp": "2026-06-05T10:50:04.388+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.1%"}
+{"timestamp": "2026-06-05T10:50:54.626+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.3%"}
+{"timestamp": "2026-06-05T10:51:44.819+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.9%; memory slope +3.0MB/tick over last 15 ticks"}
+{"timestamp": "2026-06-05T10:52:35.026+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 94.7%"}
+{"timestamp": "2026-06-05T10:53:25.272+00:00", "type": "memory_leak", "severity": "critical", "message": "Memory leak detected — memory at 96.5%"}

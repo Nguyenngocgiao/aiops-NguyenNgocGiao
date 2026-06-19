@@ -1,0 +1,35 @@
+{
+  "clusters_analyzed": 1,
+  "results": [
+    {
+      "cluster_id": "c-000-000",
+      "graph_top3": [
+        [
+          "edge-lb",
+          0.9
+        ],
+        [
+          "checkout-svc",
+          0.78
+        ],
+        [
+          "payment-svc",
+          0.52
+        ]
+      ],
+      "root_cause": "payment-svc",
+      "class": "connection_pool_exhaustion",
+      "confidence": 0.8,
+      "actions": [
+        "Rollback to v3.1. Scale pool 50 → 100 cushion. Add pool monitor alert > 80%."
+      ],
+      "reasoning": "Matched with historical incident INC-2025-11-08 (similarity: 0.80). Summary: Payment-svc v3.2 deploy at 09:42 leak DB pool. Pool 50/50 used trong 5 phút. Downstream checkout cascade. Notification queue backed up.",
+      "similar_incidents": [
+        "INC-2025-11-08",
+        "INC-2026-03-20",
+        "INC-2025-08-02"
+      ],
+      "method": "graph+retrieval"
+    }
+  ]
+}
