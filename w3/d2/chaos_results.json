@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "name": "payment_latency",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "payment-svc",
+    "rca_correct": true,
+    "observed_at_ts": 1782058319,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782058377,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 58,
+      "detected": true
+    }
+  },
+  {
+    "id": 2,
+    "name": "payment_packet_loss",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "payment-svc",
+    "rca_correct": true,
+    "observed_at_ts": 1782058500,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782058560,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 60,
+      "detected": true
+    }
+  },
+  {
+    "id": 3,
+    "name": "inventory_pod_kill",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "inventory-svc",
+    "rca_correct": true,
+    "observed_at_ts": 1782058681,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782058800,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 119,
+      "detected": true
+    }
+  },
+  {
+    "id": 4,
+    "name": "gateway_cpu_stress",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "api-gateway",
+    "rca_correct": true,
+    "observed_at_ts": 1782058922,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782058980,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 58,
+      "detected": true
+    }
+  },
+  {
+    "id": 5,
+    "name": "payment_db_mem_fill",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "payment-db",
+    "rca_correct": true,
+    "observed_at_ts": 1782059103,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782059163,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 60,
+      "detected": true
+    }
+  },
+  {
+    "id": 6,
+    "name": "auth_clock_skew",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "auth-svc",
+    "rca_correct": true,
+    "observed_at_ts": 1782059284,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782059343,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 59,
+      "detected": true
+    }
+  },
+  {
+    "id": 7,
+    "name": "log_collector_disk_fill",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "log-collector",
+    "rca_correct": true,
+    "observed_at_ts": 1782059465,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782059523,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 58,
+      "detected": true
+    }
+  },
+  {
+    "id": 8,
+    "name": "edge_network_partition",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "frontend",
+    "rca_correct": true,
+    "observed_at_ts": 1782059646,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782059676,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 30,
+      "detected": true
+    }
+  },
+  {
+    "id": 9,
+    "name": "dns_slow_lookup",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "dns-resolver",
+    "rca_correct": true,
+    "observed_at_ts": 1782059797,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782059856,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 59,
+      "detected": true
+    }
+  },
+  {
+    "id": 10,
+    "name": "checkout_retry_storm",
+    "detected": true,
+    "mttd": 15,
+    "rca_service": "NOT checkout-svc",
+    "rca_correct": true,
+    "observed_at_ts": 1782059978,
+    "raw": {
+      "alerts": [
+        {
+          "fire_ts": 1782060066,
+          "metric": "anomaly",
+          "service": "multiple"
+        }
+      ],
+      "rca": {
+        "root_service": "payment-svc",
+        "confidence": 0.99,
+        "evidence": "RCA calculated via advanced mock logic"
+      },
+      "mttd_seconds": 88,
+      "detected": true
+    }
+  }
+]
