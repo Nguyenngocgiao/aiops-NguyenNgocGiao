@@ -1,0 +1,26 @@
+[
+  {
+    "alert_id": "AL-1001",
+    "timestamp": 1782050035,
+    "severity": "critical",
+    "service": "payment-db",
+    "metric": "memory_usage_bytes",
+    "message": "High memory usage detected on payment-db (>90%)"
+  },
+  {
+    "alert_id": "AL-1002",
+    "timestamp": 1782050045,
+    "severity": "warning",
+    "service": "payment-svc",
+    "metric": "request_duration_seconds",
+    "message": "p99 latency exceeded 2s on payment-svc"
+  },
+  {
+    "alert_id": "AL-1003",
+    "timestamp": 1782050050,
+    "severity": "critical",
+    "service": "payment-svc",
+    "metric": "error_rate",
+    "message": "500 Internal Server Error rate > 10% on payment-svc"
+  }
+]

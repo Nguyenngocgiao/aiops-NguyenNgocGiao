@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp_utc": 1782050000,
+    "description": "Bơm lỗi: Tiến trình stress-ng chiếm 95% RAM trên payment-db."
+  },
+  {
+    "timestamp_utc": 1782050010,
+    "description": "Prometheus ghi nhận payment-db memory > 80% nhưng chưa sinh Alert do chưa vượt cấu hình for: 30s."
+  },
+  {
+    "timestamp_utc": 1782050015,
+    "description": "Các truy vấn từ payment-svc đến payment-db bắt đầu chậm lại do DB phải dùng swap."
+  },
+  {
+    "timestamp_utc": 1782050035,
+    "description": "Alert manager kích hoạt cảnh báo 'HighMemoryUsage' cho payment-db."
+  },
+  {
+    "timestamp_utc": 1782050045,
+    "description": "payment-svc báo lỗi timeout 500 khi gọi DB."
+  },
+  {
+    "timestamp_utc": 1782050055,
+    "description": "AIOps Pipeline phát hiện anomaly ở payment-svc và payment-db."
+  },
+  {
+    "timestamp_utc": 1782050065,
+    "description": "RCA Module chỉ ra payment-db là root cause với confidence 0.99."
+  },
+  {
+    "timestamp_utc": 1782050120,
+    "description": "Rollback lỗi: Tiến trình stress-ng bị kill, RAM được giải phóng."
+  },
+  {
+    "timestamp_utc": 1782050130,
+    "description": "Hệ thống tự động phục hồi phục vụ traffic bình thường."
+  }
+]

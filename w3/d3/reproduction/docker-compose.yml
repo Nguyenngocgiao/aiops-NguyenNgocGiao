@@ -1,0 +1,166 @@
+services:
+  frontend:
+    image: python:3.10-slim
+    ports:
+      - "80:8080"
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(10, 50)}\ncontainer_memory_usage_bytes {random.randint(40000000, 60000000)}\n".encode())
+              else:
+                  self.send_response(200)
+                  self.end_headers()
+                  self.wfile.write(b"OK")
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  api-gateway:
+    image: python:3.10-slim
+    ports:
+      - "8080:8080"
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(50, 100)}\ncontainer_memory_usage_bytes {random.randint(70000000, 90000000)}\n".encode())
+              else:
+                  self.send_response(200)
+                  self.end_headers()
+                  self.wfile.write(b"OK")
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  checkout-svc:
+    image: python:3.10-slim
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(20, 60)}\ncontainer_memory_usage_bytes {random.randint(50000000, 70000000)}\n".encode())
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  payment-svc:
+    image: python:3.10-slim
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(15, 45)}\ncontainer_memory_usage_bytes {random.randint(55000000, 75000000)}\n".encode())
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  inventory-svc:
+    image: python:3.10-slim
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(10, 30)}\ncontainer_memory_usage_bytes {random.randint(45000000, 65000000)}\n".encode())
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  notification-svc:
+    image: python:3.10-slim
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(5, 15)}\ncontainer_memory_usage_bytes {random.randint(30000000, 45000000)}\n".encode())
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  auth-svc:
+    image: python:3.10-slim
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(30, 70)}\ncontainer_memory_usage_bytes {random.randint(40000000, 55000000)}\n".encode())
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  dns-resolver:
+    image: python:3.10-slim
+    command: >
+      python -c '
+      import http.server, socketserver, random
+      class MetricHandler(http.server.SimpleHTTPRequestHandler):
+          def do_GET(self):
+              if self.path == "/metrics":
+                  self.send_response(200)
+                  self.send_header("Content-Type", "text/plain")
+                  self.end_headers()
+                  self.wfile.write(f"http_requests_total {random.randint(100, 200)}\ncontainer_memory_usage_bytes {random.randint(20000000, 35000000)}\n".encode())
+      socketserver.TCPServer(("", 8080), MetricHandler).serve_forever()
+      '
+
+  # --- DATABASES & INFRA ---
+  payment-db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: dummy
+
+  inventory-db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: dummy
+
+  cache-svc:
+    image: redis:alpine
+
+  log-collector:
+    image: alpine
+    command: sleep infinity
+
+  aiops-pipeline:
+    image: python:3.10-slim
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./aiops_engine:/app
+    working_dir: /app
+    command: bash -c "pip install fastapi uvicorn pyyaml requests && uvicorn main:app --host 0.0.0.0 --port 8000"
+
+  prometheus:
+    image: prom/prometheus:v2.50.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./configs/prometheus_targets.yml:/etc/prometheus/prometheus.yml

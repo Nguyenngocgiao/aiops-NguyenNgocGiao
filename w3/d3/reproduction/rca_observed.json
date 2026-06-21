@@ -1,0 +1,9 @@
+{
+  "incident_id": "INC-20260621-001",
+  "window_start": 1782050000,
+  "window_end": 1782050120,
+  "root_service": "payment-db",
+  "confidence": 0.99,
+  "evidence": "Topology graph correlates memory_usage_bytes spike on payment-db with downstream error_rate on payment-svc.",
+  "related_alerts": ["AL-1001", "AL-1002", "AL-1003"]
+}
